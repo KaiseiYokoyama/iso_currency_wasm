@@ -49,6 +49,8 @@ use strum::EnumIter;
 #[cfg(feature = "iterator")]
 #[cfg_attr(docsrs, doc(cfg(feature = "iterator")))]
 pub use strum::IntoEnumIterator;
+#[cfg(feature = "with-wasm")]
+use wasm_bindgen::prelude::wasm_bindgen;
 
 include!(concat!(env!("OUT_DIR"), "/isodata.rs"));
 
